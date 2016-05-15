@@ -17,17 +17,17 @@ http://www.fitspotting.com/api/public/getfitspots:1
 return all hotels with 1 or more user reviews. This returns:
 
 ```
-{
-    "HotelID": "105306",
-    "Name": "Arizona Biltmore, A Waldorf Astoria Resort",
-    "Address1": "2400 E Missouri Avenue",
-    "City": "Phoenix",
-    "StateProvince": "AZ",
-    "PostalCode": "85016",
+  {
+    "HotelID": "105655",
+    "Name": "The Fairmont Miramar Hotel & Bungalows",
+    "Address1": "101 Wilshire Blvd",
+    "City": "Santa Monica",
+    "StateProvince": "CA",
+    "PostalCode": "90401",
     "Country": "US",
-    "Latitude": "33.52331",
-    "Longitude": "-112.02456",
-    "frontImage": "http://media.expedia.com/hotels/1000000/10000/9800/9796/9796_281_b.jpg",
+    "Latitude": "34.01716",
+    "Longitude": "-118.50075",
+    "frontImage": "http://www.fitspotting.com/images/2004A96D-14D3-490B-9278-7B50A47A49B3.jpeg",
     "reviewsCnt": "1"
   }
 ```
@@ -87,7 +87,7 @@ http://www.fitspotting.com/api/public/getreviews:105687
 ```
 http://www.fitspotting.com/api/public/getimages:HotelID
 ```
-return all gym/fitness images associated with the hotel. 
+return all gym/fitness images associated with the hotel. Images are uploaded by users through the Fit Spotting iOS app.
 
 **Example Usage**
 ```
