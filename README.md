@@ -1,5 +1,7 @@
-#Fit Spotting API
+#Fit Spotting API 
 http://www.fitspotting.com
+![icon](iPhoneIcon_Big.png)
+
 
 ### Fit Spotting REST API for searching hotel gym ratings, reviews and user photos
 
