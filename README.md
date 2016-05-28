@@ -158,3 +158,101 @@ http://www.fitspotting.com/api/public/gethotels:los angeles   //spaces allowed
 | frontImage  | In URL format, this is the main image for the hotel  |
 | reviewsCnt  | Number of Review associated with the hotel  |
 
+#### getHotelsGPS
+```
+http://www.fitspotting.com/api/public/gethotels:lat:long
+```
+Returns top 50 hotels within 100 miles radius from the coordinates submitted. Results are sorted by distance where closest hotels show up first.
+
+**Example Usage with Latitude = 33.979389 and Longitude = -106.575363**
+```
+http://www.fitspotting.com/api/public/gethotelsgps:33.979389:-106.575363
+
+```
+**returns**
+```
+ {
+    "reviews": "0",
+    "hotel_image": "http://media.expedia.com/hotels/8000000/7390000/7383300/7383205/7383205_17_b.jpg",
+    "hotel_ID": "448957",
+    "StarRating": "2.0",
+    "hotel_name": "Rodeway Inn",
+    "hotel_address": "807 Highway 85",
+    "hotel_city": "Socorro",
+    "hotel_state": "NM",
+    "hotel_country": "US",
+    "hotel_postal": "87801",
+    "hotel_location": "Near Sedillo Park",
+    "hotel_long": "-106.89218",
+    "hotel_lat": "34.04813",
+    "distance": "18.8"
+  }
+```
+**JSON Fields**
+
+| Field  | Description |
+| ------------- | ------------- |
+| Reviwes | Number of User Reviews |
+| Hotel_Image | Primary Hotel Image |
+| Hotel_ID  |  Unique Hotel ID  |
+| StarRating | Hotel Star Rating as in a Five Start Hotel ..etc and not to be confused with user rating |
+| Hotel_Name  | Hotel Name  |
+| Hotel_Address | Hotel Address |
+| Hote_City  | Hotel City  |
+| Hotel_State | Hotel State if applicable |
+| Hotel_Postal  | Hotel Zip Code  |
+| Hotel_Country | Hotel Country based on 2 letter country code  |
+| Hotel_Location | Description of a close major point of interest or attraction |
+| Hotel_Long  | Goegraphical Coordinates - Longitude  |
+| Hotel_Lat | Goegraphical Coordinates - Latitude  |
+| Distance  | Distance from coordinates in miles  |
+
+#### getHotelName
+```
+http://www.fitspotting.com/api/public/gethotelname:Hotel Name
+```
+Search hotels by name. Return up to 45 hotels using Text Search/Natural Language Mode with relevance score. 
+
+**Example Usage**
+```
+http://www.fitspotting.com/api/public/gethotelname:beach view
+http://www.fitspotting.com/api/public/gethotelname:disneyland   //spaces allowed
+```
+**returns**
+```
+{
+    "HotelID": "115093",
+    "Country": "US",
+    "State": "CA",
+    "Postal": "92802",
+    "City": "Anaheim",
+    "Address1": "1150 W Magic Way",
+    "Name": "Disneyland Hotel - On Disneyland Resort Property",
+    "starRating": "4.0",
+    "Type": "Hotel",
+    "Address": "1150 W Magic Way, Anaheim, CA, US",
+    "Longitude": "-117.927180",
+    "Latitude": "33.812680",
+    "relevance": "13.05816650390625"
+  }
+```
+**JSON Fields**
+
+| Field  | Description |
+| ------------- | ------------- |
+| HotelID  |  Unique Hotel ID  |
+| Name  | Hotel Name  |
+| Address1 | Hotel Address |
+| City  | Hotel City  |
+| StateProvince | Hotel State if applicable |
+| PostalCode  | Hotel Zip Code  |
+| Country | Hotel Country based on 2 letter country code  |
+| Latitude  | Goegraphical Coordinates - Latitude  |
+| Longitude | Goegraphical Coordinates - Longitude  |
+| reviewsCnt  | Number of Review associated with the hotel  |
+| StarRating | Hotel Star Rating as in a Five Start Hotel ..etc and not to be confused with user rating |
+| Type | For this release, Type will always be "Hotel". Other types can be "Airport" or "City" to allow searches on|
+| Relevance | Search Relevance Score highest showing first - using NATURAL LANGUAGE MODE |
+
+
+
