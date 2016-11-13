@@ -3,6 +3,8 @@
 #Fit Spotting API 
 http://www.fitspotting.com
 
+# Fit Spotting API now requires a token. Please send an email to request your access token. 
+
 ### Fit Spotting REST API for searching hotel gym ratings, reviews and user photos
 
 Fit Spotting iOS app is a social media app that allows users to rate hotels based on their Fitness Centers and overall fitness offerings. This API is meant for users who would like to integrate Fit Spotting reviews with their website or app or just to explore the data.
