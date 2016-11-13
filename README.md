@@ -14,7 +14,7 @@ The original hotel listing is based on **Expedia Inc.** data with over 120,000 h
 ## How to use the API
 #### getFitSpots
 ```
-http://www.fitspotting.com/api/public/getfitspots:1
+http://www.fitspotting.com/api/public/getfitspots:{YOUR-API-TOKEN}:1
 ```
 return all hotels with 1 or more user reviews. This returns:
 
@@ -29,15 +29,15 @@ return all hotels with 1 or more user reviews. This returns:
     "Country": "US",
     "Latitude": "34.01716",
     "Longitude": "-118.50075",
-    "frontImage": "http://www.fitspotting.com/images/2004A96D-14D3-490B-9278-7B50A47A49B3.jpeg",
+    "frontImage": "http://www.fitspotting.com/images/0000001.jpeg",
     "reviewsCnt": "1"
   }
 ```
 **Example Usage**
 ```
-/getfitspots:1  //retrieves all hotels with 1 or more reviews 
-/getfitspots:2  //retrieves all hotels with 2 or more reviews 
-/getfitspots:0  //retrieves all hotels limited to 1000 only 
+/getfitspots:{YOUR-API-TOKEN}:1  //retrieves all hotels with 1 or more reviews 
+/getfitspots:{YOUR-API-TOKEN}:2  //retrieves all hotels with 2 or more reviews 
+/getfitspots:{YOUR-API-TOKEN}:0  //retrieves all hotels limited to 1000 only 
 ```
 **JSON Fields**
 
@@ -58,13 +58,13 @@ return all hotels with 1 or more user reviews. This returns:
 
 #### getReviews
 ```
-http://www.fitspotting.com/api/public/getreviews:HotelID
+http://www.fitspotting.com/api/public/getreviews:{YOUR-API-TOKEN}:HotelID
 ```
 return all reviews for the particular hotel. 
 
 **Example Usage**
 ```
-http://www.fitspotting.com/api/public/getreviews:105687
+http://www.fitspotting.com/api/public/getreviews:{YOUR-API-TOKEN}:105687
 ```
 **returns**
 ```
@@ -87,20 +87,20 @@ http://www.fitspotting.com/api/public/getreviews:105687
 
 #### getImages
 ```
-http://www.fitspotting.com/api/public/getimages:HotelID
+http://www.fitspotting.com/api/public/getimages:{YOUR-API-TOKEN}:HotelID
 ```
 return all gym/fitness images associated with the hotel. Images are uploaded by users through the Fit Spotting iOS app.
 
 **Example Usage**
 ```
-http://www.fitspotting.com/api/public/getimages:112534
+http://www.fitspotting.com/api/public/getimages:{YOUR-API-TOKEN}:112534
 ```
 **returns**
 ```
 [
   {
     "HotelID": "112534",
-    "URL": "http://www.fitspotting.com/images/112534-1.jpg",
+    "URL": "http://www.fitspotting.com/images/0000001.jpg",
     "Caption": "",
     "verified": "1"
   }
@@ -117,14 +117,14 @@ http://www.fitspotting.com/api/public/getimages:112534
 
 #### getHotels
 ```
-http://www.fitspotting.com/api/public/gethotels:City
+http://www.fitspotting.com/api/public/gethotels:{YOUR-API-TOKEN}:City
 ```
 return all hotels for the city selected. Note: The query uses a %LIKE% statement. 
 
 **Example Usage**
 ```
-http://www.fitspotting.com/api/public/gethotels:dubai
-http://www.fitspotting.com/api/public/gethotels:los angeles   //spaces allowed
+http://www.fitspotting.com/api/public/gethotels:{YOUR-API-TOKEN}:dubai
+http://www.fitspotting.com/api/public/gethotels:{YOUR-API-TOKEN}:los angeles   //spaces allowed
 ```
 **returns**
 ```
@@ -139,7 +139,7 @@ http://www.fitspotting.com/api/public/gethotels:los angeles   //spaces allowed
     "Country": "US",
     "Latitude": "34.05819",
     "Longitude": "-118.41564",
-    "frontImage": "http://media.expedia.com/hotels/1000000/20000/12700/12670/12670_136_b.jpg",
+    "frontImage": "http://www.fitspotting.com/images/0000001.jpg",
     "reviewsCnt": "0"
   }
 ]
@@ -162,20 +162,20 @@ http://www.fitspotting.com/api/public/gethotels:los angeles   //spaces allowed
 
 #### getHotelsGPS
 ```
-http://www.fitspotting.com/api/public/gethotels:lat:long
+http://www.fitspotting.com/api/public/gethotels:{YOUR-API-TOKEN}:lat:long
 ```
 Returns top 50 hotels within 100 miles radius from the coordinates submitted. Results are sorted by distance where closest hotels show up first.
 
 **Example Usage with Latitude = 33.979389 and Longitude = -106.575363**
 ```
-http://www.fitspotting.com/api/public/gethotelsgps:33.979389:-106.575363
+http://www.fitspotting.com/api/public/gethotelsgps:{YOUR-API-TOKEN}:33.979389:-106.575363
 
 ```
 **returns**
 ```
  {
     "reviews": "0",
-    "hotel_image": "http://media.expedia.com/hotels/8000000/7390000/7383300/7383205/7383205_17_b.jpg",
+    "hotel_image": "http://www.fitspotting.com/images/0000001.jpg",
     "hotel_ID": "448957",
     "StarRating": "2.0",
     "hotel_name": "Rodeway Inn",
@@ -211,14 +211,14 @@ http://www.fitspotting.com/api/public/gethotelsgps:33.979389:-106.575363
 
 #### getHotelName
 ```
-http://www.fitspotting.com/api/public/gethotelname:Hotel Name
+http://www.fitspotting.com/api/public/gethotelname:{YOUR-API-TOKEN}:Hotel Name
 ```
 Search hotels by name. Return up to 45 hotels using Text Search/Natural Language Mode with relevance score. 
 
 **Example Usage**
 ```
-http://www.fitspotting.com/api/public/gethotelname:beach view
-http://www.fitspotting.com/api/public/gethotelname:disneyland   //spaces allowed
+http://www.fitspotting.com/api/public/gethotelname:{YOUR-API-TOKEN}:beach view
+http://www.fitspotting.com/api/public/gethotelname:{YOUR-API-TOKEN}:disneyland   //spaces allowed
 ```
 **returns**
 ```
