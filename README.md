@@ -3,7 +3,7 @@
 #Fit Spotting API 
 http://www.fitspotting.com
 
-# Fit Spotting API now requires a token. Please send an email to request your access token. 
+## Note: As of 11-NOV-2016 Fit Spotting API now requires a token. Due to popularity and increasing demand we now require Access Tokens. No formal registration required. Just send an email to request your access token. 
 
 ### Fit Spotting REST API for searching hotel gym ratings, reviews and user photos
 
